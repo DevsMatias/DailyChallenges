@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void coolatz(int index, vector<int> &memo);
+void collatz(int index, vector<int> &memo);
 bool vectorHas(vector<int> vector, int intWanted);
 int index;
 
@@ -12,11 +12,11 @@ int main(){
   int number;
   int aux = 0;
   do{
-    cout << "select an int to coolatz: ";
+    cout << "select an int to collatz: ";
     cin>>number;
-    coolatz(number, memo);
+    collatz(number, memo);
     
-    cout << "\n[0]Exit [1]coolatz\n>";
+    cout << "\n[0]Exit [1]collatz\n>";
     cin>>aux;
 
     cout <<endl;
@@ -33,7 +33,7 @@ bool vectorHas(vector<int> vector, int intWanted){
   return false;
 };
 
-void coolatz(int num, vector<int> &memo){
+void collatz(int num, vector<int> &memo){
     if(!vectorHas(memo, num)){
       cout << num << " - > ";
       if(num % 2 == 0){ //par
@@ -45,7 +45,7 @@ void coolatz(int num, vector<int> &memo){
       } else {
         exit;
       }
-      coolatz(num, memo);
+      collatz(num, memo);
     } else {
       cout << "\nmemo used\n";
       for (int i = 0; i < memo.size(); i++){
