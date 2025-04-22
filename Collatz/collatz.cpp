@@ -21,6 +21,7 @@ int main(){
 
     cout <<endl;
   }while (aux != 0 || aux > 1);
+  return 0;
 }
 
 bool vectorHas(vector<int> vector, int intWanted){
