@@ -15,6 +15,7 @@ int main(){
   cin >> n;
   n_in_range(n, min, max) ? cout << "there is a multiple of "<<n<< " within the range\n" : cout << "there is no multiple of "<<n<< " within the range\n"; 
   cin>>n;
+  return 0;
 };
 bool n_in_range(int n, int min, int max){
   int const aux = n;
